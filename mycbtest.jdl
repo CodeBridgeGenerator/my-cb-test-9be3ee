@@ -1,0 +1,52 @@
+application {
+  config {
+    applicationType monolith
+    authenticationType jwt
+    baseName mycbtest
+    blueprints []
+    buildTool maven
+    cacheProvider redis
+    clientFramework react
+    clientPackageManager npm
+    clientTheme yeti
+    creationTimestamp 1727316744262
+    databaseType sql
+    devDatabaseType mysql
+    dtoSuffix DTO
+    enableGradleEnterprise false
+    enableHibernateCache true
+    enableSwaggerCodegen false
+    enableTranslation true
+    jhiPrefix jhi
+    languages [en]
+    messageBroker false
+    microfrontend false
+    microfrontends []
+    nativeLanguage en
+    packageName my.codebridge.community.mycbtest
+    prodDatabaseType mysql
+    reactive true
+    searchEngine false
+    serverPort 8080
+    serviceDiscoveryType eureka
+    skipClient false
+    skipUserManagement false
+    testFrameworks []
+    websocket false
+    withAdminUi true
+  }
+
+  entities GetUser
+}
+
+entity GetUser {
+  name String required
+  nric String required
+  dob LocalDate
+}
+
+
+paginate * with pagination
+service * with serviceImpl
+dto * with mapstruct
+
